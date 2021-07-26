@@ -15,7 +15,7 @@
 
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav>
-            <b-nav-item to="/login" v-if="!estaActivo">Login</b-nav-item>
+            <b-nav-item to="/" v-if="!estaActivo">Login</b-nav-item>
             <b-nav-item to="/usuarios" v-if="estaActivo">Usuarios</b-nav-item>
           </b-navbar-nav>
 
@@ -39,7 +39,9 @@
 
 <script>
 import { mapActions, mapGetters } from "vuex";
+import Login from './views/Login.vue';
 export default {
+  components: { Login },
   methods:{
     ...mapActions(['cerrarSesion', 'leerToken'])
   },

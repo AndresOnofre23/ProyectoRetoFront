@@ -17,7 +17,7 @@ const router =  new Router({
       meta: {requireAuth: true}
     },
     {
-      path: '/login',
+      path: '/',
       name: 'login',
       component: () => import(/* webpackChunkName: "about" */ './views/Login.vue')
     }
